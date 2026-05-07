@@ -76,9 +76,8 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 .logo-mark { width: 46px; height: 46px; flex-shrink: 0; }
 .logo-hallo { font-size: 22px; font-weight: 700; letter-spacing: -.01em; margin-top: .5rem; }
 
-.sb-profile { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: .5rem; }
-.sb-photo { width: 110px; flex-shrink: 0; aspect-ratio: 3/4; object-fit: cover; display: block; }
-.sb-bio { font-size: 12.5px; line-height: 1.7; min-width: 0; }
+.sb-photo { width: 100%; aspect-ratio: 3/4; margin-bottom: 1.1rem; object-fit: cover; display: block; }
+.sb-bio { font-size: 12.5px; line-height: 1.7; }
 .sb-bio strong { font-size: 13.5px; display: block; margin-bottom: .6rem; }
 .bio-line { display: flex; gap: .45rem; }
 .bio-line .u { flex-shrink: 0; }
