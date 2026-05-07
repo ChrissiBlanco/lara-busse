@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lara Busse — Design</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ══ UNIFIED TOPBAR ════════════════════════════════ -->
+    <header class="topbar" id="topbar">
+      <div class="topbar-inner">
+        <a
+          class="topbar-logo"
+          href="#"
+          onclick="
+            showHome();
+            return false;
+          "
+        >
+          <svg
+            class="logo-mark-sm"
+            viewBox="0 0 46 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <rect width="46" height="46" fill="#F5C800" />
+            <path
+              d="M9 37 Q13 19 17 14 Q21 9 21 20 Q21 29 15 35"
+              stroke="#111"
+              stroke-width="1.8"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19 28 Q25 15 29 13 Q33 11 31 22 Q29 31 23 37"
+              stroke="#111"
+              stroke-width="1.8"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M27 30 Q32 19 36 17 Q39 16 37 26 Q35 34 29 38"
+              stroke="#111"
+              stroke-width="1.8"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="topbar-name">Lara Busse</span>
+        </a>
+        <div class="topbar-icons" aria-label="Kontakt & Social">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a>
+          <a href="mailto:lara@larabusse.com" aria-label="E-Mail">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="3" />
+              <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ HOME VIEW ═════════════════════════════════════ -->
+    <div id="view-home">
+      <!-- Home main -->
+      <div class="home-main">
+        <!-- Mobile bio -->
+        <div class="mobile-bio">
+          <img class="mb-photo" src="img/lara.png" alt="Foto von Lara Busse" />
+          <div class="mb-text">
+            <strong>Hallo! Ich bin die Lara.</strong>
+            Kommunikationsdesignerin aus München. Ich entwickle Projekte für
+            Bildung und Gesellschaft — spielerisch und mit Haltung.
+            <div class="mb-links">
+              <a href="https://instagram.com" target="_blank" rel="noopener"
+                >Instagram</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <main>
+          <p class="section-label">Ausgewählte Projekte</p>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('beim-feiern');
+              return false;
+            "
+          >
+            <img
+              class="row-thumb"
+              src="img/balance.png"
+              alt="Beim Feiern Balance Halten"
+            />
+            <div class="row-info">
+              <h2 class="row-title">Beim Feiern Balance Halten</h2>
+              <p class="row-sub">Schulung · Typ-1-Diabetes &amp; Alkohol</p>
+              <p class="row-desc">
+                Eine Schulung für Jugendliche mit Typ-1-Diabetes zum Umgang mit
+                Alkohol und Drogen.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('decode-diversity');
+              return false;
+            "
+          >
+            <img
+              class="row-thumb"
+              src="img/decode_diversity.png"
+              alt="Decode Diversity"
+            />
+            <div class="row-info">
+              <h2 class="row-title">Decode Diversity</h2>
+              <p class="row-sub">
+                Das Spiel zur Vielfalt sexueller und geschlechtlicher Identität
+              </p>
+              <p class="row-desc">
+                In diesem interaktiven Gruppenspiel erkunden Schülerinnen und
+                Schüler ab der 8. Klasse spielerisch die Vielfalt sexueller und
+                geschlechtlicher Identitäten.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('planspiel');
+              return false;
+            "
+          >
+            <img
+              class="row-thumb"
+              src="img/planspiel.png"
+              alt="Planspiel Datendorf"
+            />
+            <div class="row-info">
+              <h2 class="row-title">Planspiel Datendorf</h2>
+              <p class="row-sub">
+                Medienkompetenz · 3. &amp; 4. Jahrgangsstufe
+              </p>
+              <p class="row-desc">
+                Kinder der 3. und 4. Klasse entscheiden gemeinsam über die
+                Einstellungen zum Datenschutz einer neuen App, die den
+                Schulalltag in Datendorf begleiten soll.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('gedankenreich');
+              return false;
+            "
+          >
+            <img
+              class="row-thumb"
+              src="img/gedankenreich.png"
+              alt="Gedankenreich"
+            />
+            <div class="row-info">
+              <h2 class="row-title">Gedankenreich</h2>
+              <p class="row-sub">
+                Das Paket für eine kreative Pause im Unterricht
+              </p>
+              <p class="row-desc">
+                Das Projekt Gedankenreich bietet die Möglichkeit Kreativität
+                nachhaltig zu fördern und in den Grundschulalltag zu
+                integrieren.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('nachhall');
+              return false;
+            "
+          >
+            <div class="row-thumb ph" role="img" aria-label="Nachhall">
+              Bild
+            </div>
+            <div class="row-info">
+              <h2 class="row-title">Nachhall</h2>
+              <p class="row-sub">Corporate Identity</p>
+              <p class="row-desc">
+                NACHHALL ist ein fiktives, unabhängiges Plattenlabel in Berlin
+                für Electro Minimal Music. Branding-System mit zwei
+                Vinyl-Reihen.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('noord-roots');
+              return false;
+            "
+          >
+            <div class="row-thumb ph" role="img" aria-label="Noord Roots">
+              Bild
+            </div>
+            <div class="row-info">
+              <h2 class="row-title">Noord Roots</h2>
+              <p class="row-sub">Place Branding · Amsterdam Noord</p>
+              <p class="row-desc">
+                Amsterdam Noord soll mit neuen Büros, Museen und
+                Wohnmöglichkeiten das Szeneviertel der Stadt werden. Ein
+                charakteristisches Place Branding.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('crossing-borders');
+              return false;
+            "
+          >
+            <div class="row-thumb ph" role="img" aria-label="Crossing Borders">
+              Bild
+            </div>
+            <div class="row-info">
+              <h2 class="row-title">Crossing Borders</h2>
+              <p class="row-sub">Siebdruck · ca. 50×65 cm · 10,–</p>
+              <p class="row-desc">
+                Im Rahmen eines Gestaltungsateliers entstand dieser Siebdruck
+                2021 während der Corona-Pandemie.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('was-waere-wenn');
+              return false;
+            "
+          >
+            <div class="row-thumb ph" role="img" aria-label="Was wäre wenn">
+              Bild
+            </div>
+            <div class="row-info">
+              <h2 class="row-title">Was wäre wenn …?</h2>
+              <p class="row-sub">Installation im öffentlichen Raum</p>
+              <p class="row-desc">
+                Wie würde ein Reichstag in Augsburg im Jahre 2020 aussehen? Eine
+                Installation, um zufällige Begegnung zu schaffen.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('ackerwert');
+              return false;
+            "
+          >
+            <div class="row-thumb ph" role="img" aria-label="A.ckerwert">
+              Bild
+            </div>
+            <div class="row-info">
+              <h2 class="row-title">A.ckerwert</h2>
+              <p class="row-sub">Flyergestaltung</p>
+              <p class="row-desc">
+                A.ckerwert unterstützt Verpächter:innen von landwirtschaftlichen
+                Flächen bei Nachhaltigkeitsaspekten in Pachtvereinbarungen.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <a
+            class="project-row"
+            href="#"
+            onclick="
+              showDetail('kuenstlerbuch');
+              return false;
+            "
+          >
+            <div class="row-thumb ph" role="img" aria-label="Künstlerbuch">
+              Bild
+            </div>
+            <div class="row-info">
+              <h2 class="row-title">Künstlerbuch</h2>
+              <p class="row-sub">Zum Anschauen und Experimentieren</p>
+              <p class="row-desc">
+                Drei Leporellos aus Zeichnungen und Geschichten, die zum
+                Anschauen und Experimentieren einladen.
+              </p>
+              <span class="mehr">Mehr</span>
+            </div>
+          </a>
+
+          <p class="section-label">Skizzenbücher</p>
+          <div class="sketches">
+            <p class="sketches-lede">
+              Mehr davon auf
+              <a href="https://instagram.com" target="_blank" rel="noopener"
+                >Instagram</a
+              >
+            </p>
+            <div class="sketch-grid">
+              <div class="sketch-block tall"></div>
+              <div class="sketch-block"></div>
+              <div class="sketch-block"></div>
+              <div class="sketch-block"></div>
+              <div class="sketch-block"></div>
+            </div>
+          </div>
+        </main>
+
+        <footer class="home-footer">
+          <p>© Lara Busse</p>
+          <div class="footer-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Über Lara Busse">
+        <div class="sb-head">
+          <div>
+            <svg
+              class="logo-mark"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect width="46" height="46" fill="#F5C800" />
+              <path
+                d="M9 37 Q13 19 17 14 Q21 9 21 20 Q21 29 15 35"
+                stroke="#111"
+                stroke-width="1.8"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19 28 Q25 15 29 13 Q33 11 31 22 Q29 31 23 37"
+                stroke="#111"
+                stroke-width="1.8"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M27 30 Q32 19 36 17 Q39 16 37 26 Q35 34 29 38"
+                stroke="#111"
+                stroke-width="1.8"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="logo-hallo">Hallo!</div>
+          </div>
+        </div>
+
+        <img class="sb-photo" src="img/lara.png" alt="Foto von Lara Busse" />
+
+        <div class="sb-bio">
+          <strong>Hallo! Ich bin die Lara.</strong>
+          <p class="sb-bio-desc">
+            Kommunikationsdesignerin aus München. Ich entwickle Projekte für
+            Bildung und Gesellschaft — spielerisch und mit Haltung.
+          </p>
+          <a
+            class="sb-insta"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            >Instagram →</a
+          >
+        </div>
+      </aside>
+    </div>
+
+    <!-- ══ DETAIL VIEW (built by JS) ════════════════════ -->
+    <div id="view-detail"></div>
+
+    <script src="js/blocks.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
