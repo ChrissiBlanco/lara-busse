@@ -16,7 +16,6 @@ function showDetail(id) {
     : '';
 
   document.getElementById('view-detail').innerHTML = `
-    <a class="detail-back" href="#" onclick="showHome();return false;">← Zurück zur Übersicht</a>
     <div class="detail-header">
       <h1 class="detail-h1">${p.title}</h1>
       <p class="detail-sub">${p.sub}</p>
@@ -24,6 +23,7 @@ function showDetail(id) {
     ${blocksHTML}
     ${contactHTML}
     <div class="detail-footer">
+      <a href="#" onclick="showHome();return false;">← Zurück zur Übersicht</a>
       <div class="footer-links">
         <a href="#">Impressum</a>
         <a href="#">Datenschutz</a>

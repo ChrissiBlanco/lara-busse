@@ -154,11 +154,11 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 
 /* Mobile bio strip */
 .mobile-bio {
-  display: none; padding: 1.25rem; border-bottom: 1px solid var(--border);
-  background: var(--light); gap: 1rem; align-items: flex-start;
+  display: none; border-bottom: 1px solid var(--border);
+  background: var(--light); flex-direction: column;
 }
-.mb-photo { width: 72px; height: 96px; flex-shrink: 0; object-fit: cover; border-radius: 3px; }
-.mb-text { font-size: 12px; line-height: 1.65; color: #333; }
+.mb-photo { width: 140px; aspect-ratio: 3/4; height: auto; object-fit: cover; object-position: top; display: block; margin: 1.25rem auto 0; border-radius: 3px; }
+.mb-text { font-size: 12px; line-height: 1.65; color: #333; padding: 1rem 1.25rem 1.25rem; }
 .mb-text strong { font-size: 13px; font-weight: 700; display: block; margin-bottom: .3rem; }
 .mb-links { display: flex; gap: 1rem; margin-top: .6rem; flex-wrap: wrap; }
 .mb-links a { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
@@ -177,14 +177,6 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
    DETAIL VIEW
 ════════════════════════════════════════════════════ */
 #view-detail { display: none; max-width: var(--max-w); margin: 0 auto; }
-
-/* Detail back link (above header) */
-.detail-back {
-  display: inline-block;
-  padding: .75rem 2rem;
-  font-size: 13px; color: var(--gray); text-decoration: none; transition: color .15s;
-}
-.detail-back:hover { color: var(--black); }
 
 /* Detail header */
 .detail-header {
@@ -216,6 +208,9 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 .block-body ul { padding-left: 1.1rem; margin-top: .4rem; }
 .block-body li { margin-bottom: .3rem; }
 .block-body em { font-style: italic; }
+
+/* Spacing between consecutive blocks on the detail screen */
+#view-detail > [class^="block-"] + [class^="block-"] { margin-top: 2.5rem; }
 
 /* — — — BLOCK A: image LEFT, text RIGHT — — — */
 .block-a {
@@ -300,7 +295,7 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 /* Detail footer */
 .detail-footer {
   padding: 1.4rem 2rem; border-top: 1px solid var(--border);
-  display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 1rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
   margin-top: 0;
 }
 .detail-footer a { font-size: 12px; color: var(--gray); text-decoration: none; transition: color .15s; }
@@ -333,7 +328,6 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
   .sketches { padding: 1.25rem; }
 
   /* Detail mobile */
-  .detail-back { padding: .6rem 1.25rem; }
   .detail-header { padding: 1.1rem 1.25rem 1rem; }
 
   /* All 2-col blocks → single col */
