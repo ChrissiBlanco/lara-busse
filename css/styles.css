@@ -190,6 +190,11 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
   border-bottom: 1px solid var(--border);
   padding-bottom: 1.25rem;
 }
+
+/* Space after the header divider before the first content block */
+.detail-header + [class^="block-"] {
+  margin-top: 2.0rem;
+}
 .detail-h1 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 500; letter-spacing: -.015em; line-height: 1.15; margin-bottom: .3rem; }
 .detail-sub { font-size: 13px; color: var(--gray); }
 
@@ -351,7 +356,7 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 
 /* Detail footer */
 .detail-footer {
-  padding: 1.4rem 0; border-top: none;
+  padding: 1.4rem 2rem; border-top: 1px solid var(--border);
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
   margin-top: 0;
 }
@@ -386,6 +391,11 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 
   /* Detail mobile */
   .detail-header { padding: 1.1rem 1.25rem 1rem; }
+
+  /* Reduce header spacing on mobile */
+  .detail-header + [class^="block-"] {
+    margin-top: 1.25rem;
+  }
 
   /* All 2-col blocks → single col */
   .block-a, .block-b { grid-template-columns: 1fr; }
