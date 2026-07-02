@@ -3,21 +3,47 @@
    array of block HTML strings, and an optional contact note (HTML or null).
 ──────────────────────────────────────────────────────────────────────────── */
 
-const PROJECTS = {
+window.PROJECTS = {
   'beim-feiern': {
     title: 'Beim Feiern Balance Halten',
     sub: 'Schulung · Typ-1-Diabetes & Alkohol',
     blocks: () => [
-      blockA({ lead: 'Wie können Jugendliche mit Typ-1-Diabetes sicher feiern? Diese Schulung gibt ihnen die Werkzeuge, um bewusst mit Alkohol und Drogen umzugehen — ohne auf das volle Jugendleben zu verzichten.', imgAlt: 'Schulungsmaterial Hauptbild' }),
-      blockE({ title: 'Projektfilm — Beim Feiern Balance Halten' }),
-      blockB({ label: 'Konzept', body: '<p>Die Schulung verbindet medizinisches Wissen mit alltagsnahen Szenarien. Anhand von Rollenspielen und interaktiven Aufgaben lernen die Teilnehmenden, ihre Blutzuckerwerte auch in Feiersituationen sicher im Blick zu behalten.</p>', imgAlt: 'Konzept-Illustration' }),
-      blockC([
-        { label: 'App-Konzept', caption: 'Begleitende digitale Unterstützung für unterwegs.', imgAlt: 'App-Mockup' },
-        { label: 'Handout', caption: 'Gedruckte Materialien zum Nachschlagen nach der Schulung.', imgAlt: 'Handout' }
+      blockCarousel({
+        label: 'Die Schulung lehrt Jugendlichen mit Typ-1-Diabetes die Herausforderungen beim Konsum von Alkohol und Drogen.',
+        body: 'Mit Hilfe von Spielkarten und Gleichgewichtsübungen auf Balance Boards beschäftigen sich die Jugendlichen (13–17 Jahre) mit möglichen Situationen und Fragestellungen, die im Laufe einer Party auf sie zukommen können. Die Schulung ist in drei Phasen aufgeteilt und bietet den Teilnehmenden Raum für Austausch mit Gleichaltrigen und Antworten auf viele Fragen. Die Schulung dient als Methode um in Diskussion zu gehen und bietet keine medizinische Empfehlung. Diese werden von den anwesenden Diabetolog:innen und Ärzt:innen individuell bei der Schulung vermittelt.',
+        images: [
+          { src: 'img/balance/DSC00693.png', imgAlt: 'Balance Board Übung', caption: 'Balance Board Training' },
+          { src: 'img/balance/DSC00726_LaraBusse.png', imgAlt: 'Jugendliche mit Spielkarten', caption: 'Spielkartenszenario' },
+          { src: 'img/balance/DSC00732_LaraBusse.jpg', imgAlt: 'Gruppe im Workshop', caption: 'Interaktiver Workshop' }
+        ]
+      }),
+      blockCarousel({
+        label: 'Gestaltung',
+        body: 'Für jede Phase gibt es passende Spielkarten, die zur Strukturierung des Workshops dienen. Die erste Phase wird mit digitalen Karten gespielt. Dafür scannen die Jugendlichen einen QR-Code auf dem Handy und werden durch weiterklicken in der ersten Phase geleitet. Dabei können sich die Jugendlichen entscheiden, ob sie den pinken oder türkisen QR-Code scannen. Der pinke thematisiert auch Cannabis und illegale Drogen, während der türkise sich nur auf Alkohol bezieht. Ebenso weisen die pink markierten Erfahrungskarten auf Inhalte mit illegalen Drogen hin und können von der Kursleiterin aussortiert werden.',
+        images: [
+          { src: 'img/balance/DSC00735_LaraBusse.jpg', imgAlt: 'Teilnehmende diskutieren'},
+          { src: 'img/balance/DSC00736_LaraBusse.jpg', imgAlt: 'Lernmaterialien auf dem Tisch' },
+          { src: 'img/balance/DSC00742_LaraBusse_ohneGesichter.png', imgAlt: 'Ohne Gesichter Workshopfoto' }
+        ]
+      }),
+      blockD([
+        { label: 'Phase 1', caption: 'Die erste Phase dient der Sensibilisierung. Die Spielkarten führen Teilnehmende durch einen fiktiven Partyabend. Die Texte werfen Fragen rund um das Thema Feiern mit Typ-1-Diabetes auf und bieten herausfordernde Übungen, um das Gleichgewicht auf dem Balance Board zu halten. Bei jeder Karte verschwindet eine Stütze unter dem Board, sodass es zunehmend mehr Konzentration benötigt, um in Balance zu bleiben.', src: 'img/balance/DSC00693.png', imgAlt: 'Phase 1 Balance Board Übung' },
+        { label: 'Phase 2', caption: 'In Phase 2 werden die Fragen der Teilnehmenden von dem anwesenden Arzt oder der anwesenden Ärztin geklärt. Auf den Karten befinden sich Tipps im Umgang mit Alkohol und Drogen, die zusammen mit den Jugendlichen erarbeitet werden sollen. Diese tauchen auch wieder auf dem Handout für die Jugendlichen auf.', src: 'img/balance/DSC00736_LaraBusse.jpg', imgAlt: 'Phase 2 Unterrichtsmaterialien' },
+        { label: 'Phase 3', caption: 'Auf Karten aus Phase 3 befinden sich Erfahrungsberichte von jungen Menschen mit Diabetes und deren Umgang auf Parties aus geführten Interviews. Diese können nach Bedarf vorgelesen werden und helfen besonders Jugendlichen mit wenig Erfahrung beim Feiern. Oft entstehen danach nochmal Fragen, die Teilnehmenden können sich bestimmte Situationen besser vorstellen und trauen sich auch von ihren eigenen Erlebnissen zu berichten.', src: 'img/balance/DSC00816.png', imgAlt: 'Phase 3 Erfahrungsberichte' }
       ]),
-      blockF({ imgAlt: 'Schulung in Aktion', height: '380px' }),
+      blockE({ title: 'Projektfilm — balance' }),
+      blockA({ label: 'Konzept', body: '<p>Die Schulung verbindet medizinisches Wissen mit alltagsnahen Szenarien. Anhand von Rollenspielen und interaktiven Aufgaben lernen die Teilnehmenden, ihre Blutzuckerwerte auch in Feiersituationen sicher im Blick zu behalten.</p>', imgAlt: 'Konzept-Illustration' }),
+      blockCarousel({
+        label: 'Ergebnis',
+        lead: 'Teilnehmende erhalten Materialien und praxisnahe Strategien, um auch beim Feiern mit Typ-1-Diabetes sicher unterwegs zu sein.',
+        images: [
+          { src: 'img/balance/DSC00816.png', imgAlt: 'Schulungsergebnis', caption: 'Ergebnis der Schulung' },
+          { src: 'img/balance/DSC00832.png', imgAlt: 'Gruppenarbeit', caption: 'Austausch mit Gleichaltrigen' },
+          { src: 'img/balance/DSC00836.png', imgAlt: 'Materialien und Workshop', caption: 'Praktische Materialien' }
+        ]
+      }),
     ],
-    contact: 'Das Projekt entstand im Rahmen meiner Bachelorarbeit. Bei Interesse melde dich gerne per <a href="mailto:lara@larabusse.com">E-Mail</a>.'
+    contact: 'Das Tool ist im Rahmen meines Studiums im Projekt "Spielen hilft!" der BURG Giebichenstein Halle entstanden. Bei Interesse an dem Spiel, melden Sie sich gerne per E-mail bei mir.'
   },
 
   'decode-diversity': {

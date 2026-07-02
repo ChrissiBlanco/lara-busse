@@ -34,4 +34,32 @@ function showDetail(id) {
   document.getElementById('view-home').style.display = 'none';
   document.getElementById('view-detail').style.display = 'block';
   window.scrollTo(0, 0);
+  
+  // Initialize carousels
+  initCarousels();
+}
+
+function initCarousels() {
+  const carousels = document.querySelectorAll('.block-carousel-inner');
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.block-carousel-slide');
+    if (slides.length <= 1) return;
+    
+    // Set first slide as active
+    slides[0].classList.add('active');
+    
+    let currentIndex = 0;
+    const rotateCarousel = () => {
+      // Remove active from current slide
+      slides[currentIndex].classList.remove('active');
+      
+      // Move to next slide
+      currentIndex = (currentIndex + 1) % slides.length;
+      
+      // Add active to new slide
+      slides[currentIndex].classList.add('active');
+    };
+    
+    setInterval(rotateCarousel, 3000);
+  });
 }

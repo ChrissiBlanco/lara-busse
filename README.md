@@ -35,7 +35,7 @@ Hosted via GitHub Pages. Push to the `main` branch; the site deploys automatical
 
 | Project | Category |
 |---|---|
-| Beim Feiern Balance Halten | Schulung · Typ-1-Diabetes & Alkohol |
+| balance | Schulung · Typ-1-Diabetes & Alkohol |
 | Decode Diversity | Gruppenspiel · sexuelle & geschlechtliche Vielfalt |
 | Planspiel Datendorf | Medienkompetenz · 3. & 4. Jahrgangsstufe |
 | Gedankenreich | Kreativprojekt · Grundschule |

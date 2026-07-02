@@ -15,6 +15,30 @@ function blockA({ label, lead, body, imgAlt }) {
   </div>`;
 }
 
+// A-carousel: image carousel left, text right (reuses block-A layout)
+function blockCarousel({ label, lead, body, images = [], imgAlt }) {
+  const slides = (images.length ? images : [{ src: '', imgAlt: imgAlt || 'Projektbild' }])
+    .map((item, index) => {
+      const src = typeof item === 'string' ? item : item.src || '';
+      const alt = typeof item === 'string' ? item : item.imgAlt || 'Bild';
+      const imageContent = src
+        ? `<img src="${src}" alt="${alt}">`
+        : `<div class="block-img ph" role="img" aria-label="${alt}">${alt}</div>`;
+      return `<div class="block-carousel-slide" data-slide="${index + 1}">
+        ${imageContent}
+      </div>`;
+    }).join('');
+
+  return `<div class="block-a block-carousel">
+    <div class="block-carousel-inner">${slides}</div>
+    <div class="block-text">
+      ${label ? `<p class="block-label">${label.toUpperCase()}</p>` : ''}
+      ${lead  ? `<p class="block-lead">${lead}</p>` : ''}
+      ${body  ? `<div class="block-body">${body}</div>` : ''}
+    </div>
+  </div>`;
+}
+
 // B: text left, image right
 function blockB({ label, lead, body, imgAlt }) {
   return `<div class="block-b">
@@ -42,14 +66,22 @@ function blockC(items) {
 
 // D: 3-column image+caption grid
 function blockD(items) {
-  const cols = items.map(it => `
+  const cols = items.map(it => {
+    const src = it.src || '';
+    const alt = it.imgAlt || it.alt || it.label || 'Bild';
+    const imageContent = src
+      ? `<img src="${src}" alt="${alt}">`
+      : `<div class="block-img ph" role="img" aria-label="${alt}">Bild</div>`;
+
+    return `
     <div class="block-d-item">
-      <div class="block-img ph" role="img" aria-label="${it.imgAlt || 'Bild'}">Bild</div>
+      ${imageContent}
       <div class="block-caption">
         ${it.label ? `<strong>${it.label.toUpperCase()}</strong>` : ''}
         ${it.caption || ''}
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
   return `<div class="block-d">${cols}</div>`;
 }
 
