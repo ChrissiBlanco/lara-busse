@@ -232,13 +232,21 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 .block-a {
   display: grid; grid-template-columns: 60% 1fr;
 }
-.block-a .block-img { width: 100%; min-height: 360px; }
+.block-a > img {
+  width: 100%;
+  height: auto;
+  max-width: 780px;
+  max-height: 620px;
+  object-fit: cover;
+  display: block;
+}
+.block-a .block-img { width: 100%; min-height: 460px; max-width: 780px; max-height: 620px; }
 .block-a.block-carousel .block-img.ph { background: linear-gradient(135deg, #e9e7e1 0%, #d8d6ce 100%); color: #999; }
 .block-a.block-carousel .block-img.ph { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
 .block-a.block-carousel .block-carousel-inner {
   display: block;
   width: 100%;
-  height: 360px;
+  height: 460px;
   overflow: hidden;
   gap: 0;
   padding: 0;
@@ -264,46 +272,98 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 .block-a.block-carousel .block-carousel-slide img {
   width: 100%;
   height: 100%;
+  max-width: 780px;
+  max-height: 620px;
   object-fit: cover;
   display: block;
 }
 .block-a.block-carousel .block-carousel-caption {
   font-size: 12px; color: var(--gray); line-height: 1.5;
 }
-.block-a .block-text { padding: 2.5rem 2.5rem; }
+.block-a .block-text { padding: 1.25rem 2.5rem 2.5rem; }
 
 /* — — — BLOCK B: text LEFT, image RIGHT — — — */
 .block-b {
   display: grid; grid-template-columns: 1fr 60%;
   border-top: 1px solid var(--border);
 }
-.block-b .block-text { padding: 2.5rem 2.5rem; border-right: 1px solid var(--border); }
-.block-b .block-img { width: 100%; min-height: 360px; }
+.block-b .block-text { padding: 1.25rem 2.5rem 2.5rem; border-right: 1px solid var(--border); }
+.block-b .block-img { width: 100%; min-height: 460px; }
 
 /* — — — BLOCK C: 2-column grid (image + caption each) — — — */
 .block-c {
-  display: grid; grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
-  border-top: 1px solid var(--border);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-sizing: border-box;
 }
-.block-d-item { display: flex; flex-direction: column; border-right: 1px solid var(--border); }
-.block-d-item:last-child { border-right: none; }
-.block-d-item .block-img { width: 100%; height: 260px; min-height: 260px; }
-.block-d-item .block-caption {
+.block-c-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  border-right: 1px solid var(--border);
+}
+.block-c-item:last-child { border-right: none; }
+.block-c-item .block-img {
+  width: 100%;
+  flex: 0 0 auto;
+  max-height: 520px;
+  height: 520px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.block-c-item img.block-img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  margin: 0 auto;
+}
+
+/* Responsive heights for block-c images (increased) */
+@media (max-width: 1280px) {
+  .block-c-item .block-img { height: 460px; }
+  .block-c-item img.block-img { height: 100%; }
+}
+@media (max-width: 1024px) {
+  .block-c-item .block-img { height: 400px; }
+  .block-c-item img.block-img { height: 100%; }
+}
+@media (max-width: 600px) {
+  .block-c-item .block-img { height: 260px; }
+  .block-c-item img.block-img { height: 100%; }
+  .block-c { grid-template-columns: 1fr; }
+  .block-c-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .block-c-item:last-child { border-bottom: none; }
+}
+.block-c-item .block-caption {
   flex: 1;
-  padding: 1rem 1.5rem; border-top: 1px solid var(--border);
-  font-size: 13px; line-height: 1.65; color: #333;
+  padding: .85rem 1.25rem; border-top: 1px solid var(--border);
+  font-size: 13px; line-height: 1.6; color: #333;
 }
 .block-c-item .block-caption strong {
-  display: block; font-size: 12px; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase; margin-bottom: .3rem; color: var(--black);
+  display: block; font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; margin-bottom: .25rem;
+}
+.block-c-item .block-caption-text {
+  font-size: 13px; line-height: 1.6; color: #333;
 }
 
 /* — — — BLOCK D: 3-column grid (image + caption each) — — — */
 .block-d {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
-  border-top: 1px solid var(--border);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .block-d-item {
   display: flex;

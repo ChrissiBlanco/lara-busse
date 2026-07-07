@@ -50,20 +50,54 @@ window.PROJECTS = {
     title: 'Decode Diversity',
     sub: 'Das Spiel zur Vielfalt sexueller und geschlechtlicher Identität',
     blocks: () => [
-      blockA({ lead: 'In diesem interaktiven Gruppenspiel erkunden Schülerinnen und Schüler ab der 8. Klasse spielerisch die Vielfalt sexueller und geschlechtlicher Identitäten.', body: '<p>Gemeinsam hören sie Audioaufnahmen, in denen Personen sich selbst beschreiben, und versuchen anhand von Hinweisen ihre Identität in fünf Kategorien einzuschätzen.</p>', imgAlt: 'Spielfeld Decode Diversity' }),
-      blockE({ src: 'https://player.vimeo.com/video/000000000', title: 'DecodeDiversity Trailer' }),
-      blockB({ label: 'Ablauf', body: `<p>Bis zu sechs Spieler:innen spielen an einem Feld, das in fünf Kategorien aufgeteilt ist. Es wird von außen nach innen gespielt — beginnend mit einer Audio vom 14-jährigen Ich der sprechenden Person.</p><p>In der letzten Runde beschreibt die Person ihre heutige Identität und nennt ihren Namen.</p>`, imgAlt: 'Spielablauf' }),
-      blockC([
-        { label: 'Digitale Präsentation', caption: 'Strukturiert und erklärt die Methode mit einer digitalen Präsentation.', imgAlt: 'Digitale Präsentation' },
-        { label: 'Vielfalts-Lexikon', caption: 'Handout: alle Begriffe des Spiels einfach erklärt.', imgAlt: 'Lexikon' }
-      ]),
-      blockA({ label: 'Spielsteine', body: '<p>Die Spielsteine zeigen diverse Körperteile. Intime Organe werden durch die nüchterne Darstellung enttabuisiert.</p>', imgAlt: 'Spielsteine' }),
-      blockD([
-        { label: 'Spielfeld', caption: 'Fünf Kategorien, konzentrisch angeordnet.', imgAlt: 'Spielfeld Detail' },
-        { label: 'Profilscheibe', caption: 'Enthüllt am Ende die Identität der sprechenden Person.', imgAlt: 'Profilscheibe' },
-        { label: 'Audiogerät', caption: 'Spielt die Audioaufnahmen der echten Personen ab.', imgAlt: 'Audiogerät' }
-      ]),
-      blockF({ imgAlt: 'Gruppe spielt Decode Diversity', height: '460px' }),
+      blockCarousel({
+        label: 'In diesem interaktiven Gruppenspiel erkunden Schülerinnen und Schüler ab der 8. Klasse spielerisch die Vielfalt sexueller und geschlechtlicher Identitäten.',
+        body: 'Gemeinsam hören sie Audioaufnahmen, in denen Personen sich selbst beschreiben, und versuchen, anhand von Hinweisen ihre Identität in fünf Kategorien einzuschätzen: Zugewiese- nes Geschlecht, Geschlechtsausdruck, Geschlechtsidentität, romantische und sexuelle Orientierung. Runde für Runde platzieren die Jugendlichen ihre Tipps auf dem Spielbrett, bis die tatsächliche Identität und das dazugehörige Profilbild enthüllt werden. Ein Spiel, das Empathie, Kommunikation über Sexualität und Verständnis für Diversität fördert! Das Spiel ist im Rahmen meiner Masterarbeit im Spiel- und Lerndesign an der BURG Giebichenstein Halle entstanden',
+        images: [
+          { src: 'img/DecodeDiversity/DecodeDiversity_LaraBusse-2.jpg', imgAlt: 'Decode Diversity Projektbild 1' },
+          { src: 'img/DecodeDiversity/DecodeDiversity_LaraBusse-1.jpg', imgAlt: 'Decode Diversity Projektbild 2' },
+          { src: 'img/DecodeDiversity/DecodeDiversity_LaraBusse-5.jpg', imgAlt: 'Decode Diversity Projektbild 3' },
+          { src: 'img/DecodeDiversity/DSC01031_B.jpg', imgAlt: 'Decode Diversity Projektbild 4' }
+        ]
+      }),
+      blockCarousel({
+        label: 'Ablauf',
+        body: 'Bis zu sechs Spieler:innen spielen an einem Feld. Das Spielfeld ist in fünf Kategorien aufgeteilt, die die sexuelle und geschlechtliche Identität beschreiben. Es wird von außen nach innen gespielt und beginnt mit einer Audio vom 14-jährigen Ich der sprechenden Person. Mit jeder Runde erhält man weitere Hinweise und nähert sich der Identität der sprechenden Person. Mit den Spielsteinen wird jede Runde getippt, wie sich die Person heute definiert. In der vierten und letzten Runde beschreibt die Person ihre heutige Identität und nennt ihren Namen. Anschließend können die Teilnehmenden die gleichnamige Profilscheibe umdrehen und in die Mitte legen. Diese zeigt die Identität der Person und funktioniert als Schablone, um die Vermutungen auf dem Spielfeld zu überprüfen.',
+        images: [
+          { src: 'img/DecodeDiversity/DSC01102_B.jpg', imgAlt: 'Decode Diversity Projektbild 5' },
+          { src: 'img/DecodeDiversity/DSC01540_B.jpg', imgAlt: 'Decode Diversity Projektbild 6' },
+          { src: 'img/DecodeDiversity/DSC01137_B.jpg', imgAlt: 'Decode Diversity Projektbild 7' }
+        ]
+      }),
+      blockCarousel({
+        label: 'Digitale Präsentation',
+        body: 'Strukturiert und erklärt wird die Methode mit Hilfe einer digitalen Präsentation. Sie gibt den Rahmen für die Audios und bietet eine Video-Anleitung für den Spielablauf.',
+        images: [
+          { src: 'img/DecodeDiversity/anleitung.png', imgAlt: 'Decode Diversity Anleitung' },
+          { src: 'img/DecodeDiversity/runde.png', imgAlt: 'Decode Diversity Runde' }
+        ]
+      }),
+      blockCarousel({
+        label: 'VIELFALTS-LEXIKON',
+        body: 'Das Lexikon wird den Spieler:innen nach dem Spiel ausgeteilt und als Handout genutzt. Alle Begriffe, die im Spiel vorkommen, werden dort einfach erklärt.',
+        images: [
+          { src: 'img/DecodeDiversity/DSC_3823_B_1.jpg', imgAlt: 'Decode Diversity Foto 1' },
+          { src: 'img/DecodeDiversity/DSC_4032_B_1.jpg', imgAlt: 'Decode Diversity Foto 2' }
+        ]
+      }),
+      blockE({ title: 'Decode Diversity — Projektvideo' }),
+      blockA({ 
+        body: 'Die Spielsteine zeigen diverse Körper- teile. Intime Organe werden durch die nüchterne Darstellung enttabuisiert.',
+        imgAlt: 'Decode Diversity Detailfoto', 
+        src: 'img/DecodeDiversity/DSC01592_B.jpg' }),
+      blockCarousel({
+        body: 'Die Verpackung passt in einen großen Rucksack und kann bequem zu einem Projekttag in die Schule mit- genommen werden. In einem Set ist Material für 30 Jugendliche enthalten. Das Spielfeld besteht aus PVC und ist damit flexibel, leicht und wasserabweisend.',
+        images: [
+          { src: 'img/DecodeDiversity/DSC_3850_B_1.jpg', imgAlt: 'Decode Diversity Foto 3' },
+          { src: 'img/DecodeDiversity/DSC01494_B.jpg', imgAlt: 'Decode Diversity Foto 4' },
+          { src: 'img/DecodeDiversity/DSC_3950_B.jpg', imgAlt: 'Decode Diversity Foto 5' }
+        ]
+      }),
     ],
     contact: 'Das Spiel ist im Rahmen meiner Masterarbeit im Spiel- und Lerndesign an der BURG Giebichenstein Halle entstanden.<br><br>Bei Interesse melden Sie sich gerne per <a href="mailto:lara@larabusse.com">E-Mail</a> bei mir.'
   },
@@ -72,14 +106,55 @@ window.PROJECTS = {
     title: 'Planspiel Datendorf',
     sub: 'Medienkompetenz für die 3. und 4. Jahrgangsstufe',
     blocks: () => [
-      blockA({ lead: 'Kinder der 3. und 4. Klasse entscheiden gemeinsam über die Einstellungen zum Datenschutz einer neuen App. Sie schlüpfen in die Rollen von vier Schülergruppen mit unterschiedlichen Interessen.', imgAlt: 'Planspiel Spielszene' }),
-      blockB({ label: 'Die Rollen', body: `<p>Es gibt Datenschützer, Entwickler, Vernetzer und Spieler. Ihr Ziel ist es gemeinsam zu entscheiden:</p><ul><li>Welche Daten sammelt die App?</li><li>Welche Berechtigungen hat sie?</li><li>Wie lenkt sie die Aufmerksamkeit auf sich?</li><li>Wie viel Werbung und In-App-Käufe baut sie ein?</li></ul>`, imgAlt: 'Rollenkarten' }),
-      blockD([
-        { label: 'Datenschützer', caption: 'Schützen die Privatsphäre der Nutzenden.', imgAlt: 'Rolle Datenschützer' },
-        { label: 'Entwickler', caption: 'Wollen eine funktionale, erfolgreiche App bauen.', imgAlt: 'Rolle Entwickler' },
-        { label: 'Spieler', caption: 'Wollen Spaß und Unterhaltung maximieren.', imgAlt: 'Rolle Spieler' }
+      blockCarousel({
+        label: 'Kinder der 3. und 4. Klasse entscheiden gemeinsam über die Einstellungen zum Datenschutz einer neuen App, die den Schulalltag in Datendorf begleiten soll. Sie schlüpfen in die Rollen von vier Schülergruppen mit unterschiedlichen Interessen.',
+        body: `<p>Es gibt Datenschützer, Entwickler, Vernetzer und Spieler. Ihr Ziel ist es, gemeinsam zu entscheiden</p><p>Welche Daten sammelt die App?<br>Welche Berechtigungen hat sie?<br>Wie lenkt sie die Aufmerksamkeit auf sich?<br>Wie viel Werbung und In-App-Käufe baut sie ein?</p><p>Das Planspiel Datendorf ist ein Rollenspiel, indem die Kinder ermutigt werden, selbstständig zu arbeiten, gemeinsam zu handeln und zusammen eine Lösung zu finden.</p><p>Das Planspiel ist im Rahmen meines Studiums im Projekt “Was brauchen Kinder?” der BURG Giebichenstein Halle entstanden.</p>`,
+        images: [
+          { src: 'img/planspiel/DSC00191klein.jpg', imgAlt: 'Planspiel Datendorf Szene 1' },
+          { src: 'img/planspiel/DSC_9332klein.jpg', imgAlt: 'Planspiel Datendorf Szene 2' },
+          { src: 'img/planspiel/DSC09642-2.jpg', imgAlt: 'Planspiel Datendorf Szene 3' },
+          { src: 'img/planspiel/DSC09667-2.jpg', imgAlt: 'Planspiel Datendorf Szene 4' }
+        ]
+      }),
+      blockC([
+        {
+          src: 'img/planspiel/DSC_9309klein.jpg',
+          label: 'Datenschützer',
+          body: 'Welche Daten sammelt die App?\n\nDie Datenschützer beschäftigen sich genauer damit, welche Daten sensibel sind und geschützt werden sollen und welche Menschen auf der Straße und somit auch die App sehen darf.'
+        },
+        {
+          src: 'img/planspiel/DSC_9316klein.jpg',
+          label: 'Spieler',
+          body: 'Wie lenkt die App Aufmerksamkeit auf sich?\n\nDie Gruppe der Spieler möchte, dass alle Kinder die App spannend finden und gerne benutzen. Dafür informieren sie sich über Tricks, die einen dazu verleiten, möglichst viel Zeit am Smartphone zu verbringen.'
+        }
       ]),
-      blockF({ imgAlt: 'Planspiel im Unterricht', height: '380px' }),
+      blockC([
+        {
+          src: 'img/planspiel/DSC_9325.jpg',
+          label: 'Entwickler',
+          body: 'Wieviel Werbung und In-App-Käufe baut die App ein?\n\nDie Entwickler kümmern sich darum, dass die App finanziert werden kann. Darum finden sie heraus, was der Unterschied zwischen Werbung und In-App-Käufen ist und entscheiden, wie viele davon in der App auftauchen.'
+        },
+        {
+          src: 'img/planspiel/DSC_9303.jpg',
+          label: 'Vernetzer',
+          body: 'Welche Berechtigungen hat die App?\n\nDie Vernetzer sind dafür verantwortlich, welche Funktionen die App nutzen darf. Sie entscheiden, ob sie Zugriff auf den Standort, Kalender oder die Kamera und das Mikrofon tatsächlich benötigt.'
+        }
+      ]),
+      blockCarousel({
+        label: 'Projektdurchführung',
+        body: 'Das Planspiel wurde in einer vierten Klasse bereits erfolgreich getestet. Die Schülerinnen und Schüler haben sich sehr gut in ihre Rollen hineinversetzen können und dementsprechend für ihre Gruppe argumentiert und verhandelt. Sie haben die Thematik enorm gut verstanden und auch komplexe Themen im Anschluss gut zusammenfassen und wiedergeben können. Das Planspiel hat einen Schulvormittag gedauert.',
+        images: [
+          { src: 'img/planspiel/DSC_9320.jpg', imgAlt: 'Projektdurchführung Planspiel 1' },
+          { src: 'img/planspiel/DSC_9272.jpg', imgAlt: 'Projektdurchführung Planspiel 2' }
+        ]
+      }),
+      blockCarousel({
+        images: [
+          { src: 'img/planspiel/DSC00221klein.jpg', imgAlt: 'Planspiel Datendorf Foto 1' },
+          { src: 'img/planspiel/DSC_9292klein.jpg', imgAlt: 'Planspiel Datendorf Foto 2' },
+          { src: 'img/planspiel/DSC00217klein.jpg', imgAlt: 'Planspiel Datendorf Foto 3' }
+        ]
+      }),
     ],
     contact: null
   },

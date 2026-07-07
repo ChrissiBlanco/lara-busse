@@ -4,9 +4,13 @@
 ──────────────────────────────────────────────────────────────────────────── */
 
 // A: image left, text right
-function blockA({ label, lead, body, imgAlt }) {
+function blockA({ label, lead, body, imgAlt, src }) {
+  const imageContent = src
+    ? `<img src="${src}" alt="${imgAlt || 'Projektbild'}">`
+    : `<div class="block-img ph" role="img" aria-label="${imgAlt || 'Projektbild'}">Bild</div>`;
+
   return `<div class="block-a">
-    <div class="block-img ph" role="img" aria-label="${imgAlt || 'Projektbild'}">Bild</div>
+    ${imageContent}
     <div class="block-text">
       ${label ? `<p class="block-label">${label.toUpperCase()}</p>` : ''}
       ${lead  ? `<p class="block-lead">${lead}</p>` : ''}
@@ -53,14 +57,24 @@ function blockB({ label, lead, body, imgAlt }) {
 
 // C: 2-column image+caption grid
 function blockC(items) {
-  const cols = items.map(it => `
+  const cols = items.map(it => {
+    const src = it.src || '';
+    const alt = it.imgAlt || it.alt || it.label || 'Bild';
+    const imageContent = src
+      ? `<img class="block-img" src="${src}" alt="${alt}">`
+      : `<div class="block-img ph" role="img" aria-label="${alt}">Bild</div>`;
+    const content = it.body || it.caption || '';
+    const captionText = content ? `<div class="block-caption-text">${content.replace(/\n/g, '<br>')}</div>` : '';
+
+    return `
     <div class="block-c-item">
-      <div class="block-img ph" role="img" aria-label="${it.imgAlt || 'Bild'}">Bild</div>
+      ${imageContent}
       <div class="block-caption">
         ${it.label ? `<strong>${it.label.toUpperCase()}</strong>` : ''}
-        ${it.caption || ''}
+        ${captionText}
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
   return `<div class="block-c">${cols}</div>`;
 }
 
