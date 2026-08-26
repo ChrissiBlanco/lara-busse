@@ -418,7 +418,7 @@ body { font-family: var(--sans); color: var(--black); background: #fff; overflow
 .detail-footer {
   padding: 1.4rem 2rem; border-top: 1px solid var(--border);
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-  margin-top: 0;
+  margin-top: 2.5rem;
 }
 .detail-footer a { font-size: 12px; color: var(--gray); text-decoration: none; transition: color .15s; }
 .detail-footer a:hover { color: var(--black); }

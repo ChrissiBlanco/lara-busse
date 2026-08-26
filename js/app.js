@@ -3,10 +3,15 @@
 function showHome() {
   document.getElementById('view-home').style.display = '';
   document.getElementById('view-detail').style.display = 'none';
+
+  if (window.location.hash) {
+    window.history.pushState(null, '', window.location.pathname);
+  }
+
   window.scrollTo(0, 0);
 }
 
-function showDetail(id) {
+function showDetail(id, { pushHistory = true } = {}) {
   const p = PROJECTS[id];
   if (!p) return;
 
@@ -34,10 +39,37 @@ function showDetail(id) {
   document.getElementById('view-home').style.display = 'none';
   document.getElementById('view-detail').style.display = 'block';
   window.scrollTo(0, 0);
-  
+
+  const detailUrl = `${window.location.pathname}#${id}`;
+  if (pushHistory && window.location.href !== detailUrl) {
+    window.history.pushState({ view: 'detail', id }, p.title, detailUrl);
+  }
+
   // Initialize carousels
   initCarousels();
 }
+
+window.addEventListener('popstate', () => {
+  const hash = window.location.hash.replace(/^#/, '');
+
+  if (hash && PROJECTS[hash]) {
+    showDetail(hash, { pushHistory: false });
+    return;
+  }
+
+  showHome();
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.replace(/^#/, '');
+
+  if (hash && PROJECTS[hash]) {
+    showDetail(hash, { pushHistory: false });
+    return;
+  }
+
+  showHome();
+});
 
 function initCarousels() {
   const carousels = document.querySelectorAll('.block-carousel-inner');

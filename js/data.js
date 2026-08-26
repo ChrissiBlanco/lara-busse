@@ -9,7 +9,7 @@ window.PROJECTS = {
     sub: 'Schulung · Typ-1-Diabetes & Alkohol',
     blocks: () => [
       blockCarousel({
-        label: 'Die Schulung lehrt Jugendlichen mit Typ-1-Diabetes die Herausforderungen beim Konsum von Alkohol und Drogen.',
+        lead: 'Die Schulung lehrt Jugendlichen mit Typ-1-Diabetes die Herausforderungen beim Konsum von Alkohol und Drogen.',
         body: 'Mit Hilfe von Spielkarten und Gleichgewichtsübungen auf Balance Boards beschäftigen sich die Jugendlichen (13–17 Jahre) mit möglichen Situationen und Fragestellungen, die im Laufe einer Party auf sie zukommen können. Die Schulung ist in drei Phasen aufgeteilt und bietet den Teilnehmenden Raum für Austausch mit Gleichaltrigen und Antworten auf viele Fragen. Die Schulung dient als Methode um in Diskussion zu gehen und bietet keine medizinische Empfehlung. Diese werden von den anwesenden Diabetolog:innen und Ärzt:innen individuell bei der Schulung vermittelt.',
         images: [
           { src: 'img/balance/DSC00693.png', imgAlt: 'Balance Board Übung', caption: 'Balance Board Training' },
@@ -35,7 +35,7 @@ window.PROJECTS = {
       blockA({ label: 'Konzept', body: '<p>Die Schulung verbindet medizinisches Wissen mit alltagsnahen Szenarien. Anhand von Rollenspielen und interaktiven Aufgaben lernen die Teilnehmenden, ihre Blutzuckerwerte auch in Feiersituationen sicher im Blick zu behalten.</p>', imgAlt: 'Konzept-Illustration' }),
       blockCarousel({
         label: 'Ergebnis',
-        lead: 'Teilnehmende erhalten Materialien und praxisnahe Strategien, um auch beim Feiern mit Typ-1-Diabetes sicher unterwegs zu sein.',
+        body: 'Teilnehmende erhalten Materialien und praxisnahe Strategien, um auch beim Feiern mit Typ-1-Diabetes sicher unterwegs zu sein.',
         images: [
           { src: 'img/balance/DSC00816.png', imgAlt: 'Schulungsergebnis', caption: 'Ergebnis der Schulung' },
           { src: 'img/balance/DSC00832.png', imgAlt: 'Gruppenarbeit', caption: 'Austausch mit Gleichaltrigen' },
@@ -51,7 +51,7 @@ window.PROJECTS = {
     sub: 'Das Spiel zur Vielfalt sexueller und geschlechtlicher Identität',
     blocks: () => [
       blockCarousel({
-        label: 'In diesem interaktiven Gruppenspiel erkunden Schülerinnen und Schüler ab der 8. Klasse spielerisch die Vielfalt sexueller und geschlechtlicher Identitäten.',
+        lead: 'In diesem interaktiven Gruppenspiel erkunden Schülerinnen und Schüler ab der 8. Klasse spielerisch die Vielfalt sexueller und geschlechtlicher Identitäten.',
         body: 'Gemeinsam hören sie Audioaufnahmen, in denen Personen sich selbst beschreiben, und versuchen, anhand von Hinweisen ihre Identität in fünf Kategorien einzuschätzen: Zugewiese- nes Geschlecht, Geschlechtsausdruck, Geschlechtsidentität, romantische und sexuelle Orientierung. Runde für Runde platzieren die Jugendlichen ihre Tipps auf dem Spielbrett, bis die tatsächliche Identität und das dazugehörige Profilbild enthüllt werden. Ein Spiel, das Empathie, Kommunikation über Sexualität und Verständnis für Diversität fördert! Das Spiel ist im Rahmen meiner Masterarbeit im Spiel- und Lerndesign an der BURG Giebichenstein Halle entstanden',
         images: [
           { src: 'img/DecodeDiversity/DecodeDiversity_LaraBusse-2.jpg', imgAlt: 'Decode Diversity Projektbild 1' },
@@ -107,7 +107,7 @@ window.PROJECTS = {
     sub: 'Medienkompetenz für die 3. und 4. Jahrgangsstufe',
     blocks: () => [
       blockCarousel({
-        label: 'Kinder der 3. und 4. Klasse entscheiden gemeinsam über die Einstellungen zum Datenschutz einer neuen App, die den Schulalltag in Datendorf begleiten soll. Sie schlüpfen in die Rollen von vier Schülergruppen mit unterschiedlichen Interessen.',
+        lead: 'Kinder der 3. und 4. Klasse entscheiden gemeinsam über die Einstellungen zum Datenschutz einer neuen App, die den Schulalltag in Datendorf begleiten soll. Sie schlüpfen in die Rollen von vier Schülergruppen mit unterschiedlichen Interessen.',
         body: `<p>Es gibt Datenschützer, Entwickler, Vernetzer und Spieler. Ihr Ziel ist es, gemeinsam zu entscheiden</p><p>Welche Daten sammelt die App?<br>Welche Berechtigungen hat sie?<br>Wie lenkt sie die Aufmerksamkeit auf sich?<br>Wie viel Werbung und In-App-Käufe baut sie ein?</p><p>Das Planspiel Datendorf ist ein Rollenspiel, indem die Kinder ermutigt werden, selbstständig zu arbeiten, gemeinsam zu handeln und zusammen eine Lösung zu finden.</p><p>Das Planspiel ist im Rahmen meines Studiums im Projekt “Was brauchen Kinder?” der BURG Giebichenstein Halle entstanden.</p>`,
         images: [
           { src: 'img/planspiel/DSC00191klein.jpg', imgAlt: 'Planspiel Datendorf Szene 1' },
@@ -149,6 +149,8 @@ window.PROJECTS = {
         ]
       }),
       blockCarousel({
+        label: 'Rollenspiel',
+        body: 'Jedes Kind bekommt eine Rollenkarte und damit verbunden die Charaktereigenschaften und Forderungen der Kleingruppe und zusätzlich eine Verantwortung innerhalb der Gruppe.',
         images: [
           { src: 'img/planspiel/DSC00221klein.jpg', imgAlt: 'Planspiel Datendorf Foto 1' },
           { src: 'img/planspiel/DSC_9292klein.jpg', imgAlt: 'Planspiel Datendorf Foto 2' },
@@ -163,13 +165,32 @@ window.PROJECTS = {
     title: 'Gedankenreich',
     sub: 'Das Paket für eine kreative Pause im Unterricht',
     blocks: () => [
-      blockA({ lead: 'Das Projekt Gedankenreich bietet die Möglichkeit Kreativität nachhaltig zu fördern und in den Grundschulalltag zu integrieren.', imgAlt: 'Gedankenreich Paket' }),
-      blockB({ label: 'Konzept', body: '<p>Gedankenreich ist ein Materialpaket für Lehrkräfte, das kurze, niedrigschwellige Kreativaufgaben für den Unterrichtsalltag bereitstellt. Die Aufgaben sind so gestaltet, dass sie ohne Vorbereitung eingesetzt werden können.</p>', imgAlt: 'Konzeptskizze' }),
-      blockC([
-        { label: 'Karten', caption: 'Impulskarten mit Aufgaben für verschiedene Altersstufen.', imgAlt: 'Karten' },
-        { label: 'Anleitung', caption: 'Leicht verständliches Heft für Lehrkräfte.', imgAlt: 'Anleitung' }
-      ]),
-      blockE({ title: 'Gedankenreich — Produktfilm' }),
+      blockCarousel({ 
+        lead: 'Das Projekt Gedankenreich bietet die Möglichkeit Kreativität nachhaltig zu fördern und in den Grundschulalltag zu integrieren.', 
+        body: 'Kreativität wird oft mit rein musischen oder handwerklichen Tätigkeiten verbunden, dabei ist sie vor allem eine schöpferische Kraft, die Neues entstehen lässt und Lösungen generiert. Sie ist elementar, um sich in unserer rasant verändernden Welt zu behaupten. Genau wie eine Sportart oder eine Sprache kann auch das kreative Denken erlernt und trainiert werden. Um die Vorstellungskraft und Originalität der zukünftigen Generationen zu schulen, sollte Kreativität ausreichend Platz in unserem Bildungssystem finden und bereits in der frühen Kindheit verstärkt gefördert werden. Mit dem Gedankenreich können Lehrkräfte das kreative Denken der 3. und 4. Klassen im Schulalltag fördern. Drei Pakete mit unterschiedlichen Themenbereichen stehen ihnen dabei zur Auswahl. Ein:e sog. Botschafter:in des Gedankenreichs liefert das Paket an die Schüler:innen und leitet das zweistündige Projekt. Dabei dürfen die Kinder Hinweise lesen und Aufgaben lösen, die ihnen helfen ihr Umfeld aus ungewohnten Perspektiven zu betrachten und neue Ideen zu kreieren.',
+        images: [
+          { src: 'img/gedankenreich/Gedankenreich1537.jpg', imgAlt: 'Gedankenreich Foto 1' },
+          { src: 'img/gedankenreich/Gedankenreich1296.jpg', imgAlt: 'Gedankenreich Foto 2' },
+          { src: 'img/gedankenreich/Gedankenreich1520.jpg', imgAlt: 'Gedankenreich Foto 3' },
+          { src: 'img/gedankenreich/Gedankenreich1793.jpg', imgAlt: 'Gedankenreich Foto 4' },
+          { src: 'img/gedankenreich/Gedankenreich1370.jpg', imgAlt: 'Gedankenreich Foto 5' }
+        ]}),
+        blockD([
+          { label: 'Paket 1', caption: '<p>Raum-Erlebnis</p><br><p>Bei diesem Paket experimentieren die Kinder mit ihrem Umfeld.Durch eine ungewohnte Nutzung der Räumlichkeiten und Objekte um sich herum, nimmt der Mensch automatisch andere Details wahr, kann seine Umgebung auf eine neue Art und Weise strukturieren und nutzen und schult somit das kreative Denken.</p>', src: 'img/gedankenreich/Gedankenreich1454.jpg', imgAlt: 'Paket 1' },
+          { label: 'Paket 2', caption: '<p>Perspektivenwechsel</p><br><p>In jeder Klasse nehmen alle eine bestimmte Rolle ein und erfüllen dementsprechend ihre Aufgaben. Um Ideen zu kreieren und Stärken aus sich herauszuholen, kann es helfen die eingespielten Rollen zu wechseln und andere Perspektiven einzunehmen. Dieses Paket hilft den Kindern sich auszuprobieren und ihren Platz in der Gruppe zu finden.</p>', src: 'img/gedankenreich/Gedankenreich1690.jpg', imgAlt: 'Paket 2' },
+          { label: 'Paket 3', caption: '<p>Ideenfindung</p><br><p>Auch Materialien, die man im Alltag benutzt, zählen zu den festen Gewohnheiten. Schnell vergisst man die Details und die Vielfalt der Objekte. Bei dem Paket Ideenfindung betrachten die Kinder ihre gewohnten Materialien ganz genau und lernen diese anhand einfacher Methoden auf neue Art und Weise zu benutzen.</p>', src: 'img/gedankenreich/Gedankenreich1308.jpg', imgAlt: 'Paket 3' }
+      ]),      
+      blockCarousel({ 
+        label: 'Projektdurchführung', 
+        body: 'Das Paket 3 Ideenfindung konnte ich in meiner Konzeptionsphase mit sieben Kindern einer 3. Klasse durchführen. Die Schüler:innen malten sich aus, wie sie ihre Stifte umfunktionieren und neu gestalten könnten und entwickelten eine große Bandbreite an neuen Ideen.',
+        images: [
+          { src: 'img/gedankenreich/DSCF3531.png', imgAlt: 'Projektdurchführung Foto 1' },
+          { src: 'img/gedankenreich/DSCF3965.png', imgAlt: 'Projektdurchführung Foto 2' },
+          { src: 'img/gedankenreich/DSCF3405.jpg', imgAlt: 'Projektdurchführung Foto 3' },
+          { src: 'img/gedankenreich/DSCF3445.jpg', imgAlt: 'Projektdurchführung Foto 4' }
+        ]}),
+        blockE({ title: 'Projektfilm — Gedankenreich' }),
+
     ],
     contact: null
   },
