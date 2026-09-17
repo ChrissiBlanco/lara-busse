@@ -135,7 +135,10 @@
                 Eine Schulung für Jugendliche mit Typ-1-Diabetes zum Umgang mit
                 Alkohol und Drogen.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -162,7 +165,10 @@
                 Schüler ab der 8. Klasse spielerisch die Vielfalt sexueller und
                 geschlechtlicher Identitäten.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -189,7 +195,10 @@
                 Einstellungen zum Datenschutz einer neuen App, die den
                 Schulalltag in Datendorf begleiten soll.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -216,7 +225,10 @@
                 nachhaltig zu fördern und in den Grundschulalltag zu
                 integrieren.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -239,7 +251,10 @@
                 für Electro Minimal Music. Branding-System mit zwei
                 Vinyl-Reihen.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -262,7 +277,10 @@
                 Wohnmöglichkeiten das Szeneviertel der Stadt werden. Ein
                 charakteristisches Place Branding.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -284,7 +302,10 @@
                 Im Rahmen eines Gestaltungsateliers entstand dieser Siebdruck
                 2021 während der Corona-Pandemie.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -306,7 +327,10 @@
                 Wie würde ein Reichstag in Augsburg im Jahre 2020 aussehen? Eine
                 Installation, um zufällige Begegnung zu schaffen.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -328,7 +352,10 @@
                 A.ckerwert unterstützt Verpächter:innen von landwirtschaftlichen
                 Flächen bei Nachhaltigkeitsaspekten in Pachtvereinbarungen.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -350,7 +377,10 @@
                 Drei Leporellos aus Zeichnungen und Geschichten, die zum
                 Anschauen und Experimentieren einladen.
               </p>
-              <span class="mehr">Mehr</span>
+              <span class="mehr" aria-label="Mehr lesen"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h12M13 5l7 7-7 7" /></svg
+              ></span>
             </div>
           </a>
 
@@ -375,8 +405,22 @@
         <footer class="home-footer">
           <p>© Lara Busse</p>
           <div class="footer-links">
-            <a href="#">Impressum</a>
-            <a href="#">Datenschutz</a>
+            <a
+              href="#"
+              onclick="
+                showLegal('impressum');
+                return false;
+              "
+              >Impressum</a
+            >
+            <a
+              href="#"
+              onclick="
+                showLegal('datenschutz');
+                return false;
+              "
+              >Datenschutz</a
+            >
           </div>
         </footer>
       </div>
@@ -443,6 +487,9 @@
 
     <!-- ══ DETAIL VIEW (built by JS) ════════════════════ -->
     <div id="view-detail"></div>
+
+    <!-- ══ LEGAL VIEW (built by JS) ════════════════════ -->
+    <div id="view-legal"></div>
 
     <script src="js/blocks.js"></script>
     <script src="js/data.js"></script>
